@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Mini Site</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ffffff;
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        .message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #800080;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Bem-vindo ao Meu Mini Site</h1>
+    <button onclick="showMessage()">Clique aqui! :)</button>
 
-    <p>Pressione o botão abaixo:</p>
+    <div class="message" id="message">Mensagem roxa exibida!</div>
 
-    <button onclick="alert('Você clicou no botão!')">Clique Aqui</button>
+    <script>
+        function showMessage() {
+            var messageDiv = document.getElementById("message");
+            messageDiv.style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
